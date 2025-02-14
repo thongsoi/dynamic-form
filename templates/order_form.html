@@ -1,0 +1,19 @@
+{{ define "content" }}
+<h2>Order Form</h2>
+<form id="order-form">
+<label for="orderType">Order Type:</label>
+    <select id="orderType" name="orderType"
+    hx-get="/order-form"
+    hx-target="#order-details"
+    hx-trigger="change">
+    <option value="">Select an order type</option>
+    <option value="local">Local Order</option>
+    <option value="global">Global Order</option>
+    </select>
+
+
+    <div id="order-details">
+        <!-- Dynamic form will load here -->
+    </div>
+</form>
+{{ end }}
